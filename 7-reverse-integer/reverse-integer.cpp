@@ -7,12 +7,12 @@ public:
             n=n/10;
             count++;
         }
-        int temp=count-1;
+        int temp=count;
         long long rev_x=0;
         for(int i=0;i<count;i++){
             int dig=x%10;
             x=x/10;
-            rev_x=rev_x+(dig*(pow(10,temp)));
+            rev_x=rev_x+(dig*(pow(10,temp-1)));
             temp--;
         }
         if(rev_x<pow(-2,31) || rev_x>(pow(2,31)-1)){
