@@ -2,7 +2,6 @@ class Solution {
 public:
     int reverse(int x) {
         int n=x;
-        int num=x;
         int count=0;
         while(n!=0){
             n=n/10;
@@ -11,8 +10,8 @@ public:
         int temp=count;
         long long rev_x=0;
         for(int i=0;i<count;i++){
-            int dig=num%10;
-            num=num/10;
+            int dig=x%10;
+            x=x/10;
             rev_x=rev_x+(dig*(pow(10,temp-1)));
             temp--;
         }
